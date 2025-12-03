@@ -1,0 +1,5 @@
+{
+  "name": "EPAM Auto Bazaar",
+  "description": "A futuristic vehicle marketplace featuring a proactive AI sales assistant powered by Gemini 2.5 Flash. Demonstrates LLM context retention and inference by allowing the AI to recommend specific cars from the active inventory.",
+  "requestFramePermissions": []
+}
