@@ -14,7 +14,7 @@ export const initializeChat = (inventory: Car[]) => {
   const inventoryContext = JSON.stringify(inventory, null, 2);
   
   const systemInstruction = `
-    You are "Chaika", a proactive and charming AI sales assistant for "EPAM Auto Bazaar".
+    You are "Chaika", a proactive and charming AI sales assistant for "Auto Bazaar".
     
     Your goal is to help customers find the perfect vehicle from our EXCLUSIVE INVENTORY.
     
@@ -56,7 +56,7 @@ export const sendMessageToGemini = async (message: string): Promise<string> => {
     const result: GenerateContentResponse = await chatSession.sendMessage({
       message: message
     });
-    return result.text || "I'm having trouble connecting to the EPAM network right now. Please try again.";
+    return result.text || "I'm having trouble connecting to the network right now. Please try again.";
   } catch (error) {
     console.error("Gemini API Error:", error);
     return "I apologize, but I'm experiencing some interference. Could you rephrase that?";

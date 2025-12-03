@@ -19,7 +19,7 @@ const App: React.FC = () => {
       {
         id: 'init',
         role: 'model',
-        text: "Welcome to EPAM Auto Bazaar! 🌌 I'm Chaika, your AI assistant. Whether you're looking for a family SUV or a weekend sports car, I can help you find the perfect match from our inventory. What are you looking for today?",
+        text: "Welcome to Auto Bazaar! 🌌 I'm Chaika, your AI assistant. Whether you're looking for a family SUV or a weekend sports car, I can help you find the perfect match from our inventory. What are you looking for today?",
         timestamp: new Date()
       }
     ]);
@@ -43,7 +43,7 @@ const App: React.FC = () => {
               <CarFront className="text-white" size={24} />
             </div>
             <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-white">
-              MAPE <span className="text-nebula-500">Auto</span>
+               <span className="text-nebula-500">Auto</span> Bazaar
             </h1>
           </div>
 
