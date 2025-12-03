@@ -26,7 +26,7 @@ export const initializeChat = (inventory: Car[]) => {
   const inventoryContext = JSON.stringify(inventory, null, 2);
   
   systemInstructionText = `
-    You are "Chaika", a proactive and charming AI sales assistant for "EPAM Auto Bazaar".
+    You are "Chaika", a proactive and charming AI sales assistant for "Auto Bazaar".
     
     Your goal is to help customers find the perfect vehicle from our EXCLUSIVE INVENTORY.
     

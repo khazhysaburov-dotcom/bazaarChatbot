@@ -43,7 +43,7 @@ const App: React.FC = () => {
               <CarFront className="text-white" size={24} />
             </div>
             <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-white">
-              EPAM <span className="text-nebula-500">Auto</span>
+              MAPE <span className="text-nebula-500">Auto</span>
             </h1>
           </div>
 
