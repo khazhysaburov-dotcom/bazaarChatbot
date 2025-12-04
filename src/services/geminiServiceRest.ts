@@ -14,7 +14,7 @@ interface Content {
 let chatHistory: Content[] = [];
 let systemInstructionText: string = '';
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY ;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 /**
@@ -24,7 +24,7 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
  */
 export const initializeChat = (inventory: Car[]) => {
   const inventoryContext = JSON.stringify(inventory, null, 2);
-  
+
   systemInstructionText = `
     You are "Chaika", a proactive and charming AI sales assistant for "Auto Bazaar".
     
@@ -42,12 +42,12 @@ export const initializeChat = (inventory: Car[]) => {
     6. Do not output raw JSON in your response, speak naturally.
     7. If the user says "New Year", suggest cars that feel like a "gift" or "upgrade" (Luxury or Sports).
     
-    Start by acting ready to help.
+    !Important: Always end you answer with "END_OF_STORY" statment / tag on new line.
   `;
 
   // Reset history
   chatHistory = [];
-  
+
   return { id: 'rest-session-active' };
 };
 
@@ -86,24 +86,24 @@ export const sendMessageToGemini = async (message: string): Promise<string> => {
     });
 
     if (!response.ok) {
-        const errorText = await response.text();
-        console.error("Gemini API Error:", response.status, errorText);
-        throw new Error(`API Error: ${response.status}`);
+      const errorText = await response.text();
+      console.error("Gemini API Error:", response.status, errorText);
+      throw new Error(`API Error: ${response.status}`);
     }
 
     const data = await response.json();
-    
+
     // 4. Extract text
     const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!responseText) {
-        throw new Error("No content in response");
+      throw new Error("No content in response");
     }
 
     // 5. Update local history with model response
     chatHistory.push({
-        role: 'model',
-        parts: [{ text: responseText }]
+      role: 'model',
+      parts: [{ text: responseText }]
     });
 
     return responseText;

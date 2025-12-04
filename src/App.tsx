@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import type { Car, ChatMessage } from './types';
 import { AVAILABLE_CARS } from './services/listOfCars';
-import { initializeChat } from './services/geminiService';
+import { initializeChat } from './services/geminiServiceRest';
 import CarCard from './components/CarCard';
 import ChatInterface from './components/ChatInterface';
 import { CarFront, Search } from 'lucide-react';
