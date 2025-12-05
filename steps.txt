@@ -1,0 +1,57 @@
+extend a context:
+    initial 
+    when we have a huge table of data 
+    when we have a lot of tables
+    function calling
+        
+tools or functions - represents business logic
+
+where to put a context? 
+
+
+roles: 
+    system - persona, behavior, knowledge base 
+    user - question
+    assistant/model - previous responses
+    tool/function - ask to run business logic and return result
+
+parameters:
+    temperature 
+    top_p
+    top_k
+    max_output_tokens
+    stop_sequences
+    response_mime_type
+    
+
+model response format:
+        {
+            "candidates": [
+                {
+                    "content": {
+                        "parts": [
+                            {
+                                "text": "Ah, great question! As Chaika, I'm here to be your friendly and knowledgeable guide through Auto Bazaar's exclusive inventory. 🚗\n\nHere's what I can do for you:\n\n*   **Recommend Vehicles:** Tell me what you're looking for – maybe a specific type like an SUV, a sports car, or an electric vehicle, or even just a general idea of your needs. I'll scour our inventory for the best matches!\n*   **Provide Details:** When I suggest a car, I'll tell you its Price, Year, and highlight some of its unique features to give you a real taste of what it offers.\n*   **Answer Your Questions:** Have a question about a particular make or model? Ask away! I know our inventory inside and out.\n*   **Help You Discover:** If you're not quite sure what you want, I can ask some clarifying questions about your budget, how you plan to use the car, or even your family size, to help us narrow down the perfect fit.\n*   **Highlight the Best:** I'll always focus on our amazing, hand-picked selection to make sure you find something truly special.\n\nThink of me as your personal car concierge! So, how can I help you start your journey to a new ride today? ✨\nEND_OF_STORY"
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "index": 0
+                }
+            ],
+            "usageMetadata": {
+                "promptTokenCount": 4738,
+                "candidatesTokenCount": 281,
+                "totalTokenCount": 5210,
+                "promptTokensDetails": [
+                    {
+                        "modality": "TEXT",
+                        "tokenCount": 4738
+                    }
+                ],
+                "thoughtsTokenCount": 191
+            },
+            "modelVersion": "gemini-2.5-flash",
+            "responseId": "R9wyabW1AtncvdIP3rvt0A4"
+        }

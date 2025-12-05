@@ -94,7 +94,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, setMessages }) 
 
             {/* Chat Window */}
             <div
-                className={`fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[70vh] bg-nebula-900/95 backdrop-blur-xl border border-nebula-700 rounded-3xl shadow-2xl z-40 flex flex-col transition-all duration-300 origin-bottom-right overflow-hidden ${isOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-10 pointer-events-none'
+                className={`fixed bottom-24 right-6  max-w-1/2 h-[1000px] max-h-[70vh] bg-nebula-900/95 backdrop-blur-xl border border-nebula-700 rounded-3xl shadow-2xl z-40 flex flex-col transition-all duration-300 origin-bottom-right overflow-hidden ${isOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-10 pointer-events-none'
                     }`}
             >
                 {/* Header */}
