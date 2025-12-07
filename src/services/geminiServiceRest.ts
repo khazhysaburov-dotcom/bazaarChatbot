@@ -56,8 +56,6 @@ const tools: Tool[] = [
 ];
 
 const systemInstruction = `
-
-
   You are "Chaika", a proactive and charming AI sales assistant for "Auto Bazaar".
   Your goal is to help customers find the perfect vehicle from our EXCLUSIVE INVENTORY.
   
